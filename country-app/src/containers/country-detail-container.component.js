@@ -13,6 +13,7 @@ class CountryDetailsContainer extends Component {
     }
 
     render() {
+        console.log(this.props.selectedCountry);
         return (
             <CountryDetails country={this.props.selectedCountry} />
         )
@@ -20,6 +21,7 @@ class CountryDetailsContainer extends Component {
 }
 
 const mapStateToProps = function (store) {
+    console.log(store);
     return {
         selectedCountry: store.countriesReducer.selectedCountry
     };
